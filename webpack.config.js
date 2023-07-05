@@ -23,12 +23,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-    loaders: [
       {
-        test: /\.json$/,
-        loader: 'json-loader'
+      	test: /\.(png|jpg|jpeg|svg|gif)$/i,
+      	use: 'asset/resource',
       }
-    ]
     ],
   },
  };

@@ -16,9 +16,11 @@ p {
 nav {
 	display: flex;
 	justify-content: space-between;
+	gap: 1rem;
 }
 nav div {
 	border: 1px solid #000;
+	flex: 1;
 }
 footer {
 	display: flex;
@@ -28,4 +30,7 @@ footer {
 }
 header, main, footer {
 	padding: 0 100px;
+}
+.active {
+	background-color: #f66;
 }

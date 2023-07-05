@@ -1,3 +1,6 @@
+import homePage from './homePage.js';
+import aboutPage from './aboutPage.js';
+import menuPage from './menuPage.js';
 function header () {
 	const topNode = document.createElement("header");
 	const navNode = document.createElement("nav");
@@ -13,16 +16,26 @@ function header () {
 	navNode.appendChild(homeTab);
 	navNode.appendChild(menuTab);
 	navNode.appendChild(aboutTab);
-	const headerItems = [homeTab, menuTab, aboutTab];
+	const headerItems = [{node: homeTab, page: homePage}, {node: menuTab, page: menuPage}, {node: aboutTab, page: aboutPage}];
 
-	headerItems.forEach( function(element, index) {
+	headerItems.forEach( function(obj, index) {
+		let element = obj.node,
+		page = obj.page();
 		element.addEventListener("click", () => {
 			let main = document.querySelector("main"),
 			footer = document.querySelector("footer");
 			document.body.removeChild(main);
-			main = document.createElement("main");
-			main.textContent = element.textContent;
-			document.body.insertBefore(main, footer);
+			document.body.insertBefore(page, footer);
+			let title = document.querySelector(".title");
+			headerItems.forEach( function(obj, index) {
+				let element = obj.node;
+				if (element.textContent === title.textContent) {
+					element.classList.add("active");
+				} else {
+					element.classList.remove("active");
+				}
+			});
+
 		})
 	});
 	topNode.appendChild(navNode);

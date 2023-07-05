@@ -1,6 +1,3 @@
-import './styles.css';
-import  header from './header.js'
-import  footer from './footer.js'
 import data from './data.json';
 function homePage () {
 	const main = document.createElement("main");
@@ -21,7 +18,4 @@ function homePage () {
 	return main;
 }
 
-document.body.appendChild(header());
-document.body.appendChild(homePage());
-document.body.appendChild(footer());
 export default homePage;
