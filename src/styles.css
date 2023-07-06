@@ -1,12 +1,16 @@
 body {
 	padding: 0;
 	margin: 0;
+	background-image: url(images/background.jpg);
+	background-size: cover;
+	color: white;
+	backdrop-filter: blur(30px);
 }
 header {
 	height: 300px;
 	display: grid;
 	align-content: center;
-	background-color: #f1f2ff;
+	background-color: black;
 }
 p {
 	line-height: 2;
@@ -19,8 +23,10 @@ nav {
 	gap: 1rem;
 }
 nav div {
+	text-align: center;
 	border: 1px solid #000;
 	flex: 1;
+	font-size: 21px;
 }
 footer {
 	display: flex;
@@ -28,9 +34,44 @@ footer {
 	background-color: black;
 	color: white;
 }
+footer div {
+	margin-bottom: 1rem;
+	}	
 header, main, footer {
 	padding: 0 100px;
 }
 .active {
 	background-color: #f66;
+}
+.meal {
+	border: 1px solid #000;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	height: 200px;
+	background-color: hsla(0,0%,0%,.5);
+}
+.meal:last-child {
+	margin-bottom: 1rem;
+}
+
+.meal div {
+	margin-left: 1rem;
+}
+main div div {
+	display: block;
+}
+main div img {
+	height: 100%;
+}
+@media screen and (max-width: 720px) {
+	header, main, footer {
+		padding: .5rem;
+	}
+	.meal {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
 }

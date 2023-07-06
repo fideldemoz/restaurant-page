@@ -3,17 +3,30 @@ function aboutPage () {
 	const main = document.createElement("main");
 	const h1 = () => document.createElement("h1");
 	const p = () => document.createElement("p");
-	let title = h1();
-	title.className = "title";
-	title.textContent = "About";
-	let title1 = h1();
-	let title1Text = p();
-	title1.textContent = data.home.title1;
-	title1Text.textContent = data.home.title1Text;
-	main.appendChild(title);
-	main.appendChild(title1);
-	main.appendChild(title1Text);
-	main.className = "home";
+	const div = () => document.createElement("div");
+
+	const about = div(),
+	aTitle = h1(),
+	aText = p();
+
+	aTitle.textContent = data.aboutPage.about;
+	aText.textContent = data.aboutPage.aText;
+	about.appendChild(aTitle);
+	about.appendChild(aText);
+
+	const location = div(),
+	lTitle = h1();
+	lTitle.textContent = data.aboutPage.location;
+	location.appendChild(lTitle);
+
+	data.aboutPage.address.forEach( function(element, index) {
+		const line = p();
+		line.textContent = element;
+		location.appendChild(line);
+	});
+
+	main.appendChild(about);
+	main.appendChild(location);
 
 	return main;
 }

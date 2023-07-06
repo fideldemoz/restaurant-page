@@ -1,8 +1,35 @@
 {
   "name": "Fidelli",
   "about": "This restaurant was created back in 1977 and it has been actively serving the best food in Mozambique.",
-  "home": {
-    "title1": "The best Restaurant in Town",
-    "title1Text": "Fidelli was elected the best restaurant of Maputo City in 2022 \nSince then, it's \" Non stop\" "
-  }
+  "homePage": {
+  	"title1": "The Restaurant that Never Disappoints",
+  	"title1Text": "Come to our beatiful restaurant and have the experience of your lifetime. We provide you with Fresh space to hang around and delicious meal to eat.",
+  	"title2":"Classic with Tradition",
+  	"title2Text": "Our restaurant dates back to 1977 when the legendary Mr. John, the chef, decided to cook his delicious meals to everyone in town.",
+  	"title3": "Delicious Meals",
+  	"title3Text": "Every single meal served at Fidelli Restaurant comes with deliciousness. Fact: That's what we are famous for."
+  },
+  "aboutPage": {
+  	"about": "About our Company",
+  	"aText": "We are a private Company specializing in food industry. Fidelli was first estabilished in 1977.",
+  	"location":"Location",
+  	"address": ["2212 Julius Nyerere Avenue", "Polana Caniço", "Maputo, Mozambique"]
+  },
+  "menuPage": [
+  	{
+  		"name":"Rice",
+  		"cost":"$ 7.99",
+  		"url": "./images/rice.jpg"
+  	},
+  	{
+  		"name":"Pasta",
+  		"cost":"$ 6.99",
+  		"url": "./images/pasta.jpg"
+  	},
+  	{
+  		"name":"Hamburger",
+  		"cost":"$ 5.99",
+  		"url": "./images/hamburger.jpg"
+  	}
+  ]
 }

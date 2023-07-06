@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
- 	mode: "development",
+ 	mode: "production",
   entry: {
     index: './src/index.js',
   },
@@ -25,7 +25,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       },
       {
       	test: /\.(png|jpg|jpeg|svg|gif)$/i,
-      	use: 'asset/resource',
+      	type: 'asset/resource',
       }
     ],
   },
